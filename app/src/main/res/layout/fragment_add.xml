@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:paddingBottom="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <include layout="@layout/custom_toolbar_empty" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mereka memanggilmu." />
+
+        <TextView
+            style="@style/Text.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#EFF3F5"
+            android:text="Bentuk suatu aksi kebaikan untuk menebar kebaikan"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btn_report_problem"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/laporkan_masalah" />
+
+            <RelativeLayout
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/report_problem_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="8dp"
+                    android:text="Laporkan masalah"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_below="@id/report_problem_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Ayo bantu teman kita dengan berbagi kisah mereka"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btn_share_story"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/berbagi_kisah" />
+
+            <RelativeLayout
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/share_story_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="8dp"
+                    android:text="Berbagi kisah"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_below="@id/share_story_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Mari berbagi kisah perjuangan dalam aksi kebaikan"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btn_make_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/buat_campaign" />
+
+            <RelativeLayout
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/make_campaign_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="8dp"
+                    android:text="Buat Campaign"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_below="@id/make_campaign_menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Ayo bantu teman kita dengan membentuk aksi kebaikan"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

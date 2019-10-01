@@ -17,8 +17,8 @@
         android:title="Tambah" />
 
     <item
-        android:id="@+id/favorite_menu"
-        android:icon="@drawable/ic_favorite"
+        android:id="@+id/story_menu"
+        android:icon="@drawable/ic_story"
         android:title="Kisah" />
 
     <item

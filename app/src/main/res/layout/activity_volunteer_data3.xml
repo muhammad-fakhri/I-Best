@@ -23,7 +23,7 @@
             android:orientation="vertical"
             android:padding="@dimen/general_margin">
 
-            <include layout="@layout/custom_toolbar" />
+            <include layout="@layout/custom_toolbar_back_arrow" />
 
             <TextView
                 style="@style/Text.Title"
