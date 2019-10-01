@@ -1,51 +1,345 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".ChooseRoleActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/main_banner"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_banner" />
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/general_margin">
+        <ImageView
+            android:id="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_banner" />
 
-        <include layout="@layout/custom_toolbar" />
-
-        <TextView
-            style="@style/Text.Title"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Halo, siap untuk melakukan aksi kebaikan?" />
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            android:padding="@dimen/general_margin">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/btn_role_volunteer"
-            android:layout_width="match_parent"
-            android:layout_height="126dp"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            app:cardCornerRadius="8dp">
+            <include layout="@layout/custom_toolbar_home" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:lineSpacingExtra="18sp"
+                android:text="Halo, siap untuk melakukan aksi kebaikan?"
+                android:textColor="#EFF3F5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="bottom|start"
-                android:text="Relawan"
-                android:textColor="#FFFFFF"
-                android:textSize="14dp" />
-        </android.support.v7.widget.CardView>
+                android:text="Aktivitas terkini"
+                android:textColor="#574F7D"
+                android:textSize="18sp" />
 
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="150dp">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp">
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/home_1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@color/white"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginEnd="10dp"
+                                        android:src="@drawable/ic_clock" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:text="10 OKTOBER 2019"
+                                        android:textAlignment="center"
+                                        android:textColor="#4D4D4D"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="68dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="Judul Campaign"
+                                    android:textAlignment="center"
+                                    android:textColor="#EFF3F5"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="bottom|start"
+                android:text="Dengar kisah mereka"
+                android:textColor="#574F7D"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp">
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/home_1" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="Judul Campaign"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="bottom|start"
+                android:text="Rekomendasi aksi"
+                android:textColor="#574F7D"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/recomend_poster"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Mari Wujudkan Kampung Anak Sejahtera!"
+                            android:textColor="#574F7D"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Kesehatan, edukasi"
+                            android:textColor="#574F7D" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_organization" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Foodbank of Indonesia" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_location" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Desa Cibatok Dua, Bogor" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="WAKTU" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="SISA HARI" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="8 Oktober 2019" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="7" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/recomend_poster"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/home_1" />
+
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0" />
+
+            <Button
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Button.Next"
+                android:text="SELENGKAPNYA"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/bottomnavigation_menu" />
 </RelativeLayout>

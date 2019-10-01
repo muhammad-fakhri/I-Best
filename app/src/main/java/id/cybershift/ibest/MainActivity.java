@@ -7,12 +7,17 @@ import android.os.Bundle;
 import id.cybershift.ibest.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
+    boolean isDone = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+
+//        if (isDone) {
+//            isDone = false;
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            startActivity(intent);
+//        }
     }
 }
