@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolunteerData.VolunteerData1Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/general_margin">
+
+            <include layout="@layout/custom_toolbar" />
+
+            <TextView
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data Relawan" />
+
+            <TextView
+                style="@style/Text.Subtitle"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:text="Kami ingin tahu lebih dekat mengenai Anda sebagai relawan kebaikan" />
+
+            <EditText
+                android:id="@+id/volunteer_dob"
+                style="@style/EditText.Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/volunteer_gender"
+                style="@style/EditText.Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail" />
+
+            <EditText
+                android:id="@+id/volunteer_job"
+                style="@style/EditText.Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password" />
+
+            <EditText
+                android:id="@+id/volunteer_institution"
+                style="@style/EditText.Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ketik Password Kembali" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/next_button"
+                    style="@style/Button.Next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELANJUTNYA" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

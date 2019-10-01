@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseRoleActivity">
+
+    <ImageView
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <include layout="@layout/custom_toolbar" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang." />
+
+        <TextView
+            style="@style/Text.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih role Anda"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btn_role_volunteer"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/relawan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="bottom|start"
+                android:text="Relawan"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btn_role_organization"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/organisasi" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="bottom|start"
+                android:text="Organisasi"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

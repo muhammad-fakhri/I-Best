@@ -1,0 +1,94 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:colorBackground">#FFFFFF</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="Text.Subtitle">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="GridTopic">
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:colorBackground">#DFF0EA</item>
+        <item name="android:layout_columnWeight">1</item>
+    </style>
+
+    <style name="GridTopic.Left">
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="GridTopic.Right">
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="EditText.Data">
+        <item name="android:textColor">#4D4D4D</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@drawable/edittext_data_rounded_corners</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="EditText.Login">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">#574F7D</item>
+        <item name="android:background">@drawable/edittext_login_rounded_corners</item>
+    </style>
+    
+    <style name="Button">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Button.Login">
+        <item name="android:background">@drawable/login_button_rounded_corners</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Next">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/next_button_rounded_corners</item>
+    </style>
+
+</resources>
