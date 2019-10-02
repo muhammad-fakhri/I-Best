@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginBottom="8dp"
-                    android:text="Berbagi kisah"
+                    android:text="Berbagi pengalaman"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 

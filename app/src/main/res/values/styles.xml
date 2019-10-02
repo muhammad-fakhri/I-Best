@@ -42,11 +42,19 @@
     </style>
 
     <style name="GridTopic.Left">
-        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginRight">8dp</item>
     </style>
 
     <style name="GridTopic.Right">
-        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+    </style>
+
+    <style name="GridTopic.LeftStory">
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+    <style name="GridTopic.RightStory">
+        <item name="android:layout_marginLeft">4dp</item>
     </style>
 
     <style name="EditText">

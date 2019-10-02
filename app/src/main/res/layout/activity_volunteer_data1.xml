@@ -39,7 +39,7 @@
                 android:text="Kami ingin tahu lebih dekat mengenai Anda sebagai relawan kebaikan" />
 
             <EditText
-                android:id="@+id/volunteer_dob"
+                android:id="@+id/campaign_title"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,21 +47,21 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/volunteer_gender"
+                android:id="@+id/campaign_time"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-mail" />
 
             <EditText
-                android:id="@+id/volunteer_job"
+                android:id="@+id/campaign_deadline"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password" />
 
             <EditText
-                android:id="@+id/volunteer_institution"
+                android:id="@+id/campaign_location"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

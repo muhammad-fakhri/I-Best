@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Campaign.MakeCampaignActivity"></activity>
+        <activity android:name=".Story.ProblemDetailActivity"></activity>
+        <activity android:name=".Campaign.MakeCampaignDoneActivity" />
+        <activity android:name=".Campaign.CampaignDetailActivity" />
+        <activity android:name=".Campaign.CampaignDataActivity" />
+        <activity android:name=".Campaign.ChooseProblemActivity" />
         <activity android:name=".VolunteerData.ThankYouActivity" />
         <activity android:name=".VolunteerData.VolunteerData3Activity" />
         <activity android:name=".VolunteerData.VolunteerData2Activity" />

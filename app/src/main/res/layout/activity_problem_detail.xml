@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Story.ProblemDetailActivity">
+
+    <ImageView
+        android:background="@drawable/detail_banner_round_corner"
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/temp_pic_2" />
+
+    <LinearLayout
+        android:id="@+id/detail_problem_poster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <include layout="@layout/custom_toolbar_back_arrow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_banner"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <TextView
+            android:lineSpacingExtra="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Stunting Masih Ada di Zaman Telepon Pintar, Bagaimana Penanganannya?"
+            android:textColor="#574F7D"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/general_margin"
+            android:layout_marginBottom="@dimen/general_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/profile_image"
+                android:layout_width="36dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                android:layout_height="36dp"
+                android:src="@drawable/temp_profile_pic"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
+
+                <TextView
+                    android:layout_toRightOf="@id/profile_image"
+                    android:id="@+id/together"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="10sp"
+                    android:textColor="#574F7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BERSAMA"/>
+
+                <TextView
+                    android:layout_toRightOf="@id/profile_image"
+                    android:layout_below="@id/together"
+                    android:id="@+id/problem_thread_maker_name"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="10sp"
+                    android:textColor="#574F7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MUHAMMAD FAKHRI"/>
+
+                <ImageView
+                    android:layout_toLeftOf="@id/location_name"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_location"/>
+
+                <TextView
+                        android:id="@+id/location_name"
+                    android:layout_alignParentRight="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:textSize="10sp"
+                        android:textColor="#CC574F7D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SUMUR BATU"/>
+
+                <TextView
+                    android:layout_below="@id/location_name"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_black"
+                    android:textSize="10sp"
+                    android:textColor="#CC574F7D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KEMAYORAN"/>
+        </RelativeLayout>
+
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:textSize="12sp"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text_detail_problem" />
+
+    </LinearLayout>
+</RelativeLayout>

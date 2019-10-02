@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VolunteerData.VolunteerData2Activity">
+    tools:context=".Campaign.CampaignDataActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,56 +29,48 @@
                 style="@style/Text.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Relawan" />
+                android:text="Mari berkontribusi." />
 
             <TextView
                 style="@style/Text.Subtitle"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="100dp"
-                android:text="Kami ingin tahu lebih dekat mengenai Anda sebagai relawan kebaikan" />
+                android:text="Bentuk suatu aksi kebaikan untuk menebar kebaikan" />
 
             <EditText
                 android:id="@+id/campaign_title"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tanggal Lahir"
-                android:inputType="date" />
+                android:hint="Judul"
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/campaign_time"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Jenis Kelamin" />
+                android:hint="Periode Waktu" />
 
             <EditText
                 android:id="@+id/campaign_deadline"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Profesi" />
+                android:hint="Batas Registrasi" />
 
             <EditText
                 android:id="@+id/campaign_location"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nama Institusi" />
-
-
-            <EditText
-                android:id="@+id/volunteer_domisili"
-                style="@style/EditText.Data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Domisili" />
+                android:hint="Lokasi" />
 
             <LinearLayout
-                android:layout_marginTop="20dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="right"
                 android:orientation="horizontal">
 
