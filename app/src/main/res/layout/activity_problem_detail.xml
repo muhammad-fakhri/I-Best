@@ -1,117 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".Story.ProblemDetailActivity">
 
-    <ImageView
-        android:background="@drawable/detail_banner_round_corner"
-        android:id="@+id/main_banner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/temp_pic_2" />
-
-    <LinearLayout
-        android:id="@+id/detail_problem_poster"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/general_margin">
-
-        <include layout="@layout/custom_toolbar_back_arrow" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_banner"
-        android:orientation="vertical"
-        android:padding="@dimen/general_margin">
-
-        <TextView
-            android:lineSpacingExtra="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Stunting Masih Ada di Zaman Telepon Pintar, Bagaimana Penanganannya?"
-            android:textColor="#574F7D"
-            android:textSize="20sp" />
+        android:layout_height="match_parent"
+        >
 
         <RelativeLayout
-            android:layout_marginTop="@dimen/general_margin"
-            android:layout_marginBottom="@dimen/general_margin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_alignParentLeft="true"
-                android:id="@+id/profile_image"
-                android:layout_width="36dp"
-                android:layout_marginRight="@dimen/activity_horizontal_margin_half"
-                android:layout_height="36dp"
-                android:src="@drawable/temp_profile_pic"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FF000000"/>
+            <ImageView
+                android:id="@+id/main_banner"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/detail_banner_round_corner"
+                android:scaleType="centerCrop"
+                android:src="@drawable/temp_pic_2" />
+
+            <LinearLayout
+                android:id="@+id/detail_problem_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/general_margin">
+
+                <include layout="@layout/custom_toolbar_back_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_banner"
+                android:orientation="vertical"
+                android:padding="@dimen/general_margin">
 
                 <TextView
-                    android:layout_toRightOf="@id/profile_image"
-                    android:id="@+id/together"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textSize="10sp"
-                    android:textColor="#574F7D"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BERSAMA"/>
-
-                <TextView
-                    android:layout_toRightOf="@id/profile_image"
-                    android:layout_below="@id/together"
-                    android:id="@+id/problem_thread_maker_name"
                     android:fontFamily="@font/roboto_bold"
-                    android:textSize="10sp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Stunting Masih Ada di Zaman Telepon Pintar, Bagaimana Penanganannya?"
                     android:textColor="#574F7D"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MUHAMMAD FAKHRI"/>
+                    android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_toLeftOf="@id/location_name"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/general_margin"
+                    android:layout_marginBottom="@dimen/general_margin">
+
+                    <ImageView
                         android:layout_width="15dp"
                         android:layout_height="15dp"
-                        android:src="@drawable/ic_location"/>
+                        android:layout_toLeftOf="@id/location_name"
+                        android:src="@drawable/ic_location" />
 
-                <TextView
-                        android:id="@+id/location_name"
-                    android:layout_alignParentRight="true"
-                        android:fontFamily="@font/roboto_black"
-                        android:textSize="10sp"
-                        android:textColor="#CC574F7D"
+                    <TextView
+                        android:id="@+id/problem_thread_maker_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="SUMUR BATU"/>
+                        android:layout_below="@id/together"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="MUHAMMAD FAKHRI"
+                        android:textColor="#574F7D"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/together"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="BERSAMA"
+                        android:textColor="#574F7D"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/location_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="SUMUR BATU"
+                        android:textColor="#CC574F7D"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location_name"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="KEMAYORAN"
+                        android:textColor="#CC574F7D"
+                        android:textSize="10sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                        android:src="@drawable/temp_profile_pic"
+                        app:civ_border_color="#00FFFFFF"
+                        app:civ_border_width="2dp" />
+                </RelativeLayout>
 
                 <TextView
-                    android:layout_below="@id/location_name"
-                    android:layout_alignParentRight="true"
-                    android:fontFamily="@font/roboto_black"
-                    android:textSize="10sp"
-                    android:textColor="#CC574F7D"
-                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/general_margin"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="KEMAYORAN"/>
+                    android:fontFamily="@font/roboto"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/dummy_text_detail_problem"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
         </RelativeLayout>
+    </ScrollView>
 
-        <TextView
-            android:fontFamily="@font/roboto"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
             android:textSize="12sp"
-            android:lineSpacingExtra="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_text_detail_problem" />
+            android:id="@+id/btn_donate"
+            android:layout_centerInParent="true"
+            style="@style/Donate"
+            android:layout_marginRight="32dp"
+            android:layout_height="28dp"
+            android:layout_width="264dp"
+            android:text="DONASI" />
 
-    </LinearLayout>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_donate"
+            android:src="@drawable/ic_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/> 
+    </RelativeLayout>
 </RelativeLayout>

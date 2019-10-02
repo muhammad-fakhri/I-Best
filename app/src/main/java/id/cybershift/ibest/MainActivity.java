@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
     boolean isDone = true;
     public static String EXTRA_FROM = "extra_from";
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                     SearchFragment searchFragment = new SearchFragment();
                     AddFragment addFragment = new AddFragment();
                     StoryFragment storyFragment = new StoryFragment();
+                    CommunityFragment communityFragment= new CommunityFragment();
                     Fragment fragment;
                     switch (menuItem.getItemId()) {
                         case R.id.home_menu:
@@ -59,6 +63,15 @@ public class MainActivity extends AppCompatActivity {
                                         .commit();
                             }
                             return true;
+                        case R.id.community_menu:
+                            fragment = fragmentManager.findFragmentByTag(CommunityFragment.class.getSimpleName());
+                            if (!(fragment instanceof CommunityFragment)) {
+                                fragmentManager
+                                        .beginTransaction()
+                                        .replace(R.id.fragment_container, communityFragment, CommunityFragment.class.getSimpleName())
+                                        .commit();
+                            }
+                            return true;
                         default:
                             return false;
                     }
@@ -69,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+        myRef.setValue("Hello, World!");
 
         BottomNavigationView navigationView = findViewById(R.id.main_bn);
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);

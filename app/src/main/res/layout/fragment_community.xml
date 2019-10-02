@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+
+        <ImageView
+            android:id="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/general_margin">
+
+            <include layout="@layout/custom_toolbar_home_community" />
+
+            <TextView
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Komunitas" />
+
+            <TextView
+                style="@style/Text.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Atur kegiatan komunitas mu di sini."
+                android:textColor="#EFF3F5" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_margin">
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/community_post_part"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Post"
+                            android:textColor="#EFF3F5"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/underline_post_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/community_timeline_part"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Timeline"
+                            android:textColor="#EFF3F5"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/underline_timeline_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/community_album_part"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Album"
+                            android:textColor="#EFF3F5"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/underline_album_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_marginBottom="40dp"
+                app:cardCornerRadius="12dp"
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:text="Apa yang kamu Pikirkan?" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                        android:src="@drawable/temp_profile_pic"
+                        app:civ_border_color="#00FFFFFF"
+                        app:civ_border_width="2dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/report_notif"
+                android:layout_marginBottom="100dp"
+                app:cardCornerRadius="12dp"
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin_half"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="205dp">
+
+                    <ImageView
+                        android:id="@+id/icon_pin"
+                        android:src="@drawable/ic_pin"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin_half"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/icon_pin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:id="@+id/title_post"
+                        android:textSize="14sp"
+                        android:textColor="#4D4D4D"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Lengkapi laporanmu, pahlawan"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_toLeftOf="@id/admin_name"
+                        android:id="@+id/admin_profile_pic"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/admin"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/admin_name"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="#4D4D4D"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="10sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADMIN" />
+
+
+                    <TextView
+                        android:id="@+id/post_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_below="@id/title_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terima kasih atas kerja kerasmu, pahlawan. Ayo lengkapi laporanmu untuk kemajuan daerah yang kamu kunjungi."
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="#4D4D4D"
+                        android:lineSpacingExtra="8dp"/>
+
+                    <View
+                        android:id="@+id/horizontal_line"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_below="@id/post_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#FF574F7D"/>
+
+                    <TextView
+                        android:layout_toLeftOf="@id/next_post_icon"
+                        android:layout_below="@id/horizontal_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SELENGKAPNYA"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin_half"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="10sp"
+                        android:textColor="#574F7D"/>
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
+                        android:id="@+id/next_post_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/horizontal_line"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/ic_arrow_right_purple"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

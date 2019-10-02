@@ -1,511 +1,511 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".Campaign.ChooseProblemActivity">
-
-<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".Campaign.ChooseProblemActivity">
 
-    <RelativeLayout
-        android:paddingBottom="@dimen/general_margin"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/main_banner"
+        <RelativeLayout
+            android:paddingBottom="@dimen/general_margin"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_banner" />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="32dp"
-            android:padding="@dimen/general_margin">
+            <ImageView
+                android:id="@+id/main_banner"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_banner" />
 
-            <include layout="@layout/custom_toolbar_back_arrow" />
-
-            <TextView
-                style="@style/Text.Title"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Angkat kisah mereka." />
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp"
+                android:padding="@dimen/general_margin">
 
-            <TextView
-                style="@style/Text.Subtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#EFF3F5"
-                android:layout_marginBottom="50dp"
-                android:text="Bentuk suatu aksi kebaikan untuk menebar kebaikan"/>
+                <include layout="@layout/custom_toolbar_back_arrow" />
 
-            <SearchView
-                android:iconifiedByDefault="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:queryHint="Cari"
-                android:background="@drawable/edittext_data_rounded_corners"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    style="@style/Text.Title"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:orientation="horizontal">
+                    android:text="Angkat kisah mereka." />
 
-                    <TextView
+                <TextView
+                    style="@style/Text.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#EFF3F5"
+                    android:layout_marginBottom="50dp"
+                    android:text="Bentuk suatu aksi kebaikan untuk menebar kebaikan"/>
+
+                <SearchView
+                    android:iconifiedByDefault="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:queryHint="Cari"
+                    android:background="@drawable/edittext_data_rounded_corners"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Urut Tanggal"
-                        android:textColor="#574F7D"
-                        android:textSize="14sp" />
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Urut Tanggal"
+                            android:textColor="#574F7D"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_arrow_down" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="0dp">
 
                     <RelativeLayout
-                        android:layout_marginLeft="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <ImageView
-                            android:layout_centerInParent="true"
-                            android:layout_width="10dp"
-                            android:layout_height="10dp"
-                            android:src="@drawable/ic_arrow_down" />
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/problem_poster"
+                            android:layout_width="130dp"
+                            android:layout_height="180dp"
+                            android:layout_marginEnd="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/home_1" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/problem_poster"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Mari Wujudkan Kampung Anak Sejahtera!"
+                                android:textColor="#574F7D"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Kesehatan, edukasi"
+                                android:textColor="#574F7D" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_organization" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Foodbank of Indonesia" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Desa Cibatok Dua, Bogor" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="WAKTU" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="SISA HARI" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="8 Oktober 2019" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="7" />
+                            </RelativeLayout>
+                        </LinearLayout>
                     </RelativeLayout>
-                </LinearLayout>
-            </RelativeLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                app:cardBackgroundColor="@color/transparent"
-                app:cardElevation="0dp">
+                </android.support.v7.widget.CardView>
 
-                <RelativeLayout
+                <View
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
 
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/problem_poster"
-                        android:layout_width="130dp"
-                        android:layout_height="180dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/home_1" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/problem_poster"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Mari Wujudkan Kampung Anak Sejahtera!"
-                            android:textColor="#574F7D"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Kesehatan, edukasi"
-                            android:textColor="#574F7D" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_organization" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Foodbank of Indonesia" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_location" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Desa Cibatok Dua, Bogor" />
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="WAKTU" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="SISA HARI" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="8 Oktober 2019" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="7" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <View
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#c0c0c0" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                app:cardBackgroundColor="@color/transparent"
-                app:cardElevation="0dp">
-
-                <RelativeLayout
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="0dp">
 
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/recomend_poster"
-                        android:layout_width="130dp"
-                        android:layout_height="180dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/home_1" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/recomend_poster"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Mari Wujudkan Kampung Anak Sejahtera!"
-                            android:textColor="#574F7D"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Kesehatan, edukasi"
-                            android:textColor="#574F7D" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:orientation="horizontal">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/recomend_poster"
+                            android:layout_width="130dp"
+                            android:layout_height="180dp"
+                            android:layout_marginEnd="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
 
                             <ImageView
-                                android:layout_width="16dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/ic_organization" />
+                                android:scaleType="fitXY"
+                                android:src="@drawable/home_1" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/recomend_poster"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Foodbank of Indonesia" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_location" />
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Mari Wujudkan Kampung Anak Sejahtera!"
+                                android:textColor="#574F7D"
+                                android:textSize="14sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Desa Cibatok Dua, Bogor" />
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Kesehatan, edukasi"
+                                android:textColor="#574F7D" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_organization" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Foodbank of Indonesia" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Desa Cibatok Dua, Bogor" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="WAKTU" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="SISA HARI" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="8 Oktober 2019" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="7" />
+                            </RelativeLayout>
                         </LinearLayout>
+                    </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp">
+                </android.support.v7.widget.CardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="WAKTU" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="SISA HARI" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="8 Oktober 2019" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="7" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <View
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#c0c0c0" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                app:cardBackgroundColor="@color/transparent"
-                app:cardElevation="0dp">
-
-                <RelativeLayout
+                <View
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
 
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/recomend_poster"
-                        android:layout_width="130dp"
-                        android:layout_height="180dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="0dp">
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/home_1" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    </android.support.v7.widget.CardView>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/recomend_poster"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Mari Wujudkan Kampung Anak Sejahtera!"
-                            android:textColor="#574F7D"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Kesehatan, edukasi"
-                            android:textColor="#574F7D" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:orientation="horizontal">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/recomend_poster"
+                            android:layout_width="130dp"
+                            android:layout_height="180dp"
+                            android:layout_marginEnd="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
 
                             <ImageView
-                                android:layout_width="16dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/ic_organization" />
+                                android:scaleType="fitXY"
+                                android:src="@drawable/home_1" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/recomend_poster"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Foodbank of Indonesia" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_location" />
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Mari Wujudkan Kampung Anak Sejahtera!"
+                                android:textColor="#574F7D"
+                                android:textSize="14sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="Desa Cibatok Dua, Bogor" />
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Kesehatan, edukasi"
+                                android:textColor="#574F7D" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_organization" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Foodbank of Indonesia" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Desa Cibatok Dua, Bogor" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="WAKTU" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="SISA HARI" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="8 Oktober 2019" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="7" />
+                            </RelativeLayout>
                         </LinearLayout>
+                    </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp">
+                </android.support.v7.widget.CardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="WAKTU" />
+                <View
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="SISA HARI" />
-                        </RelativeLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Button.Next"
+                    android:text="SELENGKAPNYA"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+            </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:text="8 Oktober 2019" />
+        </RelativeLayout>
+    </ScrollView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:text="7" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="8dp">
 
-            </android.support.v7.widget.CardView>
-
-            <View
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#c0c0c0" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Button.Next"
-                android:text="SELENGKAPNYA"/>
-
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/btn_donate"
+            style="@style/Button.Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="LEWATI" />
     </RelativeLayout>
-</ScrollView>
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:layout_alignParentBottom="true"
-    android:background="@color/white"
-    android:padding="8dp">
-
-    <Button
-        android:id="@+id/btn_skip"
-        style="@style/Button.Next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="LEWATI" />
-</RelativeLayout>
 </RelativeLayout>

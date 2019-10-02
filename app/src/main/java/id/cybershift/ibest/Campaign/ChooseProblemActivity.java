@@ -3,7 +3,6 @@ package id.cybershift.ibest.Campaign;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +17,7 @@ public class ChooseProblemActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_choose_problem);
 
         ImageView backButton = findViewById(R.id.back_button);
-        Button skip = findViewById(R.id.btn_skip);
+        Button skip = findViewById(R.id.btn_donate);
         skip.setOnClickListener(this);
         backButton.setOnClickListener(this);
     }
@@ -29,7 +28,7 @@ public class ChooseProblemActivity extends AppCompatActivity implements View.OnC
             case R.id.back_button:
                 finish();
                 break;
-            case R.id.btn_skip:
+            case R.id.btn_donate:
                 startActivity(new Intent(this, CampaignDataActivity.class));
                 break;
         }

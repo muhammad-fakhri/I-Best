@@ -61,7 +61,7 @@
                 android:hint="Profesi" />
 
             <EditText
-                android:id="@+id/campaign_location"
+                android:id="@+id/tell_date_and_time"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "719469989461",
+    "firebase_url": "https://i-best-ipb.firebaseio.com",
+    "project_id": "i-best-ipb",
+    "storage_bucket": "i-best-ipb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719469989461:android:8ca5a4c00864dfcb9e8edc",
+        "android_client_info": {
+          "package_name": "id.cybershift.ibest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719469989461-fr0oth904c2hli8ub1bu6k6vtn8j8bs2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.cybershift.ibest",
+            "certificate_hash": "6fbe9f334269e0c1b482ce5365c9426dc0b3179a"
+          }
+        },
+        {
+          "client_id": "719469989461-p75irsprp2m3vklhvaglc6osag458ud4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG4CJjtEbcIoVnJNwY8XrI1UY7lKEPAkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719469989461-p75irsprp2m3vklhvaglc6osag458ud4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

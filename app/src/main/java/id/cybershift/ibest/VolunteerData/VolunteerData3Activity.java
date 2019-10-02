@@ -3,6 +3,7 @@ package id.cybershift.ibest.VolunteerData;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,6 +21,8 @@ public class VolunteerData3Activity extends AppCompatActivity implements View.On
         ImageView backArrow = findViewById(R.id.back_button);
         Button next = findViewById(R.id.next_button);
 
+        ImageView issue1 = findViewById(R.id.imageView);
+        issue1.setOnClickListener(this);
         backArrow.setOnClickListener(this);
         next.setOnClickListener(this);
     }
@@ -31,6 +34,8 @@ public class VolunteerData3Activity extends AppCompatActivity implements View.On
         } else if (view.getId() == R.id.next_button) {
             Intent intent = new Intent(this, ThankYouActivity.class);
             startActivity(intent);
+        } else if (view.getId()==R.id.imageView){
+
         }
     }
 }

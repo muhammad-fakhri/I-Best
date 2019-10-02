@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Report.Report1Activity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <include layout="@layout/custom_toolbar_back_arrow" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terima kasih, pahlawan" />
+
+        <TextView
+            style="@style/Text.Subtitle"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="Ayo lengkapi laporanmu untuk kemajuan daerah yang kamu kunjungi" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Foto"
+            android:textSize="14sp"
+            android:textColor="#4F3A65"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:background="@drawable/edittext_data_rounded_corners"></View>
+
+            <ImageView
+                android:id="@+id/received_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/add_image_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_add"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kisahkan Pengalamanmu"
+            android:textSize="14sp"
+            android:textColor="#4F3A65"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+        <EditText
+            android:id="@+id/tell_date_and_time"
+            style="@style/EditText.Data"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:gravity="top"
+            android:hint="Ceritakan pengalaman serumu saat berkunjung ke daerah campaign" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/next_button"
+                style="@style/Button.Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELANJUTNYA" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

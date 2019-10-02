@@ -22,7 +22,7 @@
         android:title="Kisah" />
 
     <item
-        android:id="@+id/account_menu"
-        android:icon="@drawable/ic_group"
+        android:id="@+id/community_menu"
+        android:icon="@drawable/ic_community"
         android:title="Komunitas" />
 </menu>
