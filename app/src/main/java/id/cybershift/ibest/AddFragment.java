@@ -10,11 +10,10 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import id.cybershift.ibest.campaign.ChooseProblemActivity;
 import id.cybershift.ibest.experience.ExperienceDataActivity;
-import id.cybershift.ibest.problem.ProblemDataActivity;
+import id.cybershift.ibest.problem.MakeProblemDataActivity;
 
 
 /**
@@ -54,7 +53,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(this.getActivity(), ChooseProblemActivity.class));
                 break;
             case R.id.btn_report_problem:
-                startActivity(new Intent(this.getActivity(), ProblemDataActivity.class));
+                startActivity(new Intent(this.getActivity(), MakeProblemDataActivity.class));
                 break;
             case R.id.btn_share_story:
                 startActivity(new Intent(this.getActivity(), ExperienceDataActivity.class));

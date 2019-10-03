@@ -19,8 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import id.cybershift.ibest.R;
 import id.cybershift.ibest.model.Experience;
-import id.cybershift.ibest.problem.ProblemThankYouActivity;
-import id.cybershift.ibest.volunteerData.ThankYouActivity;
+import id.cybershift.ibest.problem.MakeProblemThankYouActivity;
 
 public class ExperienceDataActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -69,7 +68,7 @@ public class ExperienceDataActivity extends AppCompatActivity implements View.On
                             Toast.makeText(ExperienceDataActivity.this, "Masalahmu tersimpan ke database", Toast.LENGTH_SHORT).show();
                         }
                     });
-            startNewMainActivity(ExperienceDataActivity.this, ProblemThankYouActivity.class);
+            startNewMainActivity(ExperienceDataActivity.this, MakeProblemThankYouActivity.class);
         } else if (view.getId() == R.id.back_button) {
             finish();
         }

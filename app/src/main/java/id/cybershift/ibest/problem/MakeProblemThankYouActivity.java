@@ -10,7 +10,7 @@ import android.widget.Button;
 import id.cybershift.ibest.MainActivity;
 import id.cybershift.ibest.R;
 
-public class ProblemThankYouActivity extends AppCompatActivity {
+public class MakeProblemThankYouActivity extends AppCompatActivity {
 
     Button toHome;
     Activity activity;
@@ -18,7 +18,7 @@ public class ProblemThankYouActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem_thank_you);
+        setContentView(R.layout.activity_make_problem_thank_you);
         activity = this;
         toHome = findViewById(R.id.btn_to_home);
         toHome.setOnClickListener(new View.OnClickListener() {

@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".experience.ExperienceDataActivity"></activity>
-        <activity android:name=".problem.ProblemThankYouActivity" />
-        <activity android:name=".problem.ProblemDetailActivity" />
-        <activity android:name=".problem.ProblemDataActivity" />
+        <activity android:name=".campaign.JoinCampaignThankYouActivity"></activity>
+        <activity android:name=".campaign.CampaignDetailActivity" />
+        <activity android:name=".experience.ExperienceDataActivity" />
+        <activity android:name=".problem.MakeProblemThankYouActivity" />
+        <activity android:name=".problem.MakeProblemDetailActivity" />
+        <activity android:name=".problem.MakeProblemDataActivity" />
         <activity android:name=".organizationData.OrganizationData4Activity" />
         <activity android:name=".organizationData.OrganizationData3Activity" />
         <activity android:name=".organizationData.OrganizationData2Activity" />
@@ -22,8 +24,8 @@
         <activity android:name=".report.Report1Activity" />
         <activity android:name=".story.ProblemDetailActivity" />
         <activity android:name=".campaign.MakeCampaignDoneActivity" />
-        <activity android:name=".campaign.CampaignDetailActivity" />
-        <activity android:name=".campaign.CampaignDataActivity" />
+        <activity android:name=".campaign.MakeCampaignDetailActivity" />
+        <activity android:name=".campaign.MakeCampaignDataActivity" />
         <activity android:name=".campaign.ChooseProblemActivity" />
         <activity android:name=".volunteerData.ThankYouActivity" />
         <activity android:name=".volunteerData.VolunteerData3Activity" />

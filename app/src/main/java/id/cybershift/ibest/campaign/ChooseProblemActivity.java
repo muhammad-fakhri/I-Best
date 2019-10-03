@@ -29,7 +29,7 @@ public class ChooseProblemActivity extends AppCompatActivity implements View.OnC
                 finish();
                 break;
             case R.id.btn_donate:
-                startActivity(new Intent(this, CampaignDataActivity.class));
+                startActivity(new Intent(this, MakeCampaignDataActivity.class));
                 break;
         }
     }

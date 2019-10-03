@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 import id.cybershift.ibest.R;
 import id.cybershift.ibest.model.Campaign;
 
-public class CampaignDataActivity extends AppCompatActivity implements View.OnClickListener {
+public class MakeCampaignDataActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText title, time, deadline, location;
     FirebaseAuth auth;
@@ -23,7 +23,7 @@ public class CampaignDataActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_campaign_data);
+        setContentView(R.layout.activity_make_campaign_data);
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -49,8 +49,8 @@ public class CampaignDataActivity extends AppCompatActivity implements View.OnCl
                     deadline.getText().toString(),
                     location.getText().toString()
             );
-            Intent intent = new Intent(this, CampaignDetailActivity.class);
-            intent.putExtra(CampaignDetailActivity.EXTRA_CAMPAIGN_DATA, campaign);
+            Intent intent = new Intent(this, MakeCampaignDetailActivity.class);
+            intent.putExtra(MakeCampaignDetailActivity.EXTRA_CAMPAIGN_DATA, campaign);
             startActivity(intent);
         } else if (view.getId() == R.id.back_button) {
             finish();

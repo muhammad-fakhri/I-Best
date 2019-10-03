@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 import id.cybershift.ibest.R;
 import id.cybershift.ibest.model.Problem;
 
-public class ProblemDataActivity extends AppCompatActivity implements View.OnClickListener {
+public class MakeProblemDataActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnNext;
     ImageView backBtn;
@@ -26,7 +26,7 @@ public class ProblemDataActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem_data);
+        setContentView(R.layout.activity_make_problem_data);
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -51,8 +51,8 @@ public class ProblemDataActivity extends AppCompatActivity implements View.OnCli
             problem.setTitle(title.getText().toString());
             problem.setLocation(location.getText().toString());
             problem.setContact(contact.getText().toString());
-            Intent intent = new Intent(view.getContext(), ProblemDetailActivity.class);
-            intent.putExtra(ProblemDetailActivity.EXTRA_PROBLEM, problem);
+            Intent intent = new Intent(view.getContext(), MakeProblemDetailActivity.class);
+            intent.putExtra(MakeProblemDetailActivity.EXTRA_PROBLEM, problem);
             startActivity(intent);
         } else if (view.getId() == R.id.back_button) {
             finish();
