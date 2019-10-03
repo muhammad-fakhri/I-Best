@@ -1,9 +1,8 @@
-package id.cybershift.ibest.Campaign;
+package id.cybershift.ibest.campaign;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -12,14 +11,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import id.cybershift.ibest.R;
+import id.cybershift.ibest.model.Campaign;
 
 public class CampaignDetailActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static final String EXTRA_CAMPAIGN_DATA = "extra_campaign_data";
     int PICK_IMAGE_REQUEST = 1;
     Bitmap bitmap, decoded;
     ImageView receivedImage, btnAddImage;
@@ -30,6 +37,8 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campaign_detail);
 
+        Campaign campaign= getIntent().getParcelableExtra(EXTRA_CAMPAIGN_DATA);
+
         Button btnNext = findViewById(R.id.next_button);
         ImageView backButton = findViewById(R.id.back_button);
         btnAddImage = findViewById(R.id.add_image_btn);
@@ -37,6 +46,26 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
         btnNext.setOnClickListener(this);
         backButton.setOnClickListener(this);
         btnAddImage.setOnClickListener(this);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("campaign");
+
+//        Intent intent = getIntent();
+//        Campaign campaign = new Campaign(
+//                intent.getStringExtra("EXTRA_TITLE"),
+//                intent.getStringExtra("EXTRA_TIME"),
+//                intent.getStringExtra("EXTRA_DEADLINE"),
+//                intent.getStringExtra("EXTRA_LOCATION")
+//        );
+
+        reference.child("campaign").push()
+                .setValue(campaign)
+                .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(CampaignDetailActivity.this, "BERHASIL MENYIMPAN DATA KE DATABASE", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     @Override

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/general_margin"
-    tools:context=".VolunteerData.ThankYouActivity">
+    tools:context=".volunteerData.ThankYouActivity">
 
     <Button
         android:id="@+id/btn_to_home"

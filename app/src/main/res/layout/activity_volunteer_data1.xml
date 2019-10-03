@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VolunteerData.VolunteerData1Activity">
+    tools:context=".volunteerData.VolunteerData1Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:text="Kami ingin tahu lebih dekat mengenai Anda sebagai relawan kebaikan" />
 
             <EditText
-                android:id="@+id/campaign_title"
+                android:id="@+id/volunteer_name"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,26 +47,28 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/campaign_time"
+                android:id="@+id/volunteer_email"
+                android:inputType="textEmailAddress"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-mail" />
 
             <EditText
-                android:id="@+id/campaign_deadline"
+                android:id="@+id/volunteer_password"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="Password" />
 
             <EditText
-                android:id="@+id/tell_date_and_time"
+                android:id="@+id/volunteer_confirm_password"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="Ketik Password Kembali" />
-
 
             <LinearLayout
                 android:layout_marginTop="20dp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:columnCount="2"
-    tools:context=".Story.ProblemFragment">
+    tools:context=".story.ProblemFragment">
 
     <android.support.v7.widget.CardView
         android:id="@+id/problem_1"

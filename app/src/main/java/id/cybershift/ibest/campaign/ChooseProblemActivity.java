@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Campaign;
+package id.cybershift.ibest.campaign;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Campaign;
+package id.cybershift.ibest.campaign;
 
 import android.app.Activity;
 import android.content.Intent;

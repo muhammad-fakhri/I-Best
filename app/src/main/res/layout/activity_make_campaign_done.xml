@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:padding="@dimen/general_margin"
-tools:context=".Campaign.MakeCampaignDoneActivity">
+tools:context=".campaign.MakeCampaignDoneActivity">
 
 <Button
     android:id="@+id/btn_to_home"

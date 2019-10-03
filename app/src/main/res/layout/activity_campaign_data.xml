@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Campaign.CampaignDataActivity">
+    tools:context=".campaign.CampaignDataActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 android:hint="Batas Registrasi" />
 
             <EditText
-                android:id="@+id/tell_date_and_time"
+                android:id="@+id/campaign_location"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

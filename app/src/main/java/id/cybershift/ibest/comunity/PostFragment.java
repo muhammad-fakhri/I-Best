@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Story;
+package id.cybershift.ibest.comunity;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import id.cybershift.ibest.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ExperienceFragment extends Fragment {
+public class PostFragment extends Fragment {
 
 
-    public ExperienceFragment() {
+    public PostFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class ExperienceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_experience, container, false);
+        return inflater.inflate(R.layout.fragment_post, container, false);
     }
 
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VolunteerData.VolunteerData2Activity">
+    tools:context=".volunteerData.VolunteerData2Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,29 +39,52 @@
                 android:text="Kami ingin tahu lebih dekat mengenai Anda sebagai relawan kebaikan" />
 
             <EditText
-                android:id="@+id/campaign_title"
+                android:id="@+id/volunteer_dob"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tanggal Lahir"
                 android:inputType="date" />
 
-            <EditText
-                android:id="@+id/campaign_time"
-                style="@style/EditText.Data"
-                android:layout_width="match_parent"
+            <TextView
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Jenis Kelamin" />
+                android:text="Jenis Kelamin"/>
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/man"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki"/>
+
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"/>
+
+            </RadioGroup>
 
             <EditText
-                android:id="@+id/campaign_deadline"
+                android:inputType="text"
+                android:id="@+id/volunteer_job"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Profesi" />
 
             <EditText
-                android:id="@+id/tell_date_and_time"
+                android:inputType="text"
+                android:id="@+id/volunteer_institution"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,6 +92,7 @@
 
 
             <EditText
+                android:inputType="text"
                 android:id="@+id/volunteer_domisili"
                 style="@style/EditText.Data"
                 android:layout_width="match_parent"

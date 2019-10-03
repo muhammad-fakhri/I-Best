@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Story;
+package id.cybershift.ibest.story;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

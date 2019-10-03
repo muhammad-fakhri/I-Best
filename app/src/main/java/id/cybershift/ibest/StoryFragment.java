@@ -1,20 +1,17 @@
 package id.cybershift.ibest;
 
 
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import id.cybershift.ibest.Story.ExperienceFragment;
-import id.cybershift.ibest.Story.ProblemFragment;
+import id.cybershift.ibest.story.ExperienceFragment;
+import id.cybershift.ibest.story.ProblemFragment;
 
 
 /**

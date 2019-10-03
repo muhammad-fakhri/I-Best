@@ -1,4 +1,4 @@
-package id.cybershift.ibest.VolunteerData;
+package id.cybershift.ibest.volunteerData;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,12 @@ import android.widget.ImageView;
 
 import id.cybershift.ibest.R;
 
-public class VolunteerData2Activity extends AppCompatActivity implements View.OnClickListener {
+public class VolunteerData1Activity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_volunteer_data2);
+        setContentView(R.layout.activity_volunteer_data1);
 
         //Casting view
         ImageView backArrow = findViewById(R.id.back_button);
@@ -29,7 +29,7 @@ public class VolunteerData2Activity extends AppCompatActivity implements View.On
         if (view.getId() == R.id.back_button) {
             finish();
         } else if (view.getId() == R.id.next_button) {
-            Intent intent = new Intent(this, VolunteerData3Activity.class);
+            Intent intent = new Intent(this, VolunteerData2Activity.class);
             startActivity(intent);
         }
     }

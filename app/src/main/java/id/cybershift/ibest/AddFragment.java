@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import id.cybershift.ibest.Campaign.ChooseProblemActivity;
+import id.cybershift.ibest.campaign.ChooseProblemActivity;
 
 
 /**

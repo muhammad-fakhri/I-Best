@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Campaign.CampaignDetailActivity">
+tools:context=".campaign.CampaignDetailActivity">
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -105,7 +105,7 @@ tools:context=".Campaign.CampaignDetailActivity">
             android:hint="Briefing" />
 
         <EditText
-            android:id="@+id/tell_date_and_time"
+            android:id="@+id/campaign_location"
             style="@style/EditText.Data"
             android:layout_width="match_parent"
             android:layout_height="250dp"

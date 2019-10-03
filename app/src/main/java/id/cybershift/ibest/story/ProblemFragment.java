@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Story;
+package id.cybershift.ibest.story;
 
 
 import android.content.Intent;

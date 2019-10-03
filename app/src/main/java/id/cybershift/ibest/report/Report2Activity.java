@@ -1,4 +1,4 @@
-package id.cybershift.ibest.Report;
+package id.cybershift.ibest.report;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
