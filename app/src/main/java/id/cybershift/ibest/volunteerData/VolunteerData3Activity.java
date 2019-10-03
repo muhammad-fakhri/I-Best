@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import id.cybershift.ibest.R;
-import id.cybershift.ibest.model.Volunteer;
 
 public class VolunteerData3Activity extends AppCompatActivity implements View.OnClickListener {
 

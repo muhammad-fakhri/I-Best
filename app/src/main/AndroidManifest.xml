@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".report.ReportThankYouActivity"></activity>
+        <activity android:name=".organizationData.OrganizationData4Activity" />
+        <activity android:name=".organizationData.OrganizationData3Activity" />
+        <activity android:name=".organizationData.OrganizationData2Activity" />
+        <activity android:name=".organizationData.OrganizationData1Activity" />
+        <activity android:name=".report.ReportThankYouActivity" />
         <activity android:name=".report.Report2Activity" />
         <activity android:name=".report.Report1Activity" />
         <activity android:name=".story.ProblemDetailActivity" />

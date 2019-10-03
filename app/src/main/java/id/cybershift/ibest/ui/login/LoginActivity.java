@@ -33,6 +33,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import id.cybershift.ibest.ChooseRoleActivity;
 import id.cybershift.ibest.MainActivity;
 import id.cybershift.ibest.R;
 import id.cybershift.ibest.volunteerData.VolunteerData1Activity;
@@ -107,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                             FirebaseUser user = auth.getCurrentUser();
                             Toast.makeText(LoginActivity.this, "Halo " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
 //                            startNewMainActivity(activity, MainActivity.class);
-                            startActivity(new Intent(activity, VolunteerData2Activity.class));
+                            startActivity(new Intent(activity, ChooseRoleActivity.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("FAKHRI", "signInWithCredential:failure", task.getException());

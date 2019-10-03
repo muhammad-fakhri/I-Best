@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import id.cybershift.ibest.organizationData.OrganizationData1Activity;
+import id.cybershift.ibest.organizationData.OrganizationData2Activity;
 import id.cybershift.ibest.volunteerData.VolunteerData1Activity;
+import id.cybershift.ibest.volunteerData.VolunteerData2Activity;
 
 public class ChooseRoleActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,11 +42,12 @@ public class ChooseRoleActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
             case R.id.btn_role_volunteer:
-                Intent intent = new Intent(this, VolunteerData1Activity.class);
-                startActivity(intent);
+                Intent intentVolunteer = new Intent(this, VolunteerData2Activity.class);
+                startActivity(intentVolunteer);
                 break;
             case R.id.btn_role_organization:
-                Toast.makeText(this, "PUSH ORGANIZATION ROLE", Toast.LENGTH_SHORT).show();
+                Intent intentOrganization = new Intent(this, OrganizationData2Activity.class);
+                startActivity(intentOrganization);
         }
     }
 }

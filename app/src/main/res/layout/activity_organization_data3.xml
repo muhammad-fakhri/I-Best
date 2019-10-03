@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".organizationData.OrganizationData3Activity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/general_margin">
+
+        <include layout="@layout/custom_toolbar_back_arrow" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Organisasi" />
+
+        <TextView
+            style="@style/Text.Subtitle"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="Kami ingin tahu lebih jauh mengenai organisasi yang Anda kelola" />
+
+        <TextView
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#574F7D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Organisasi" />
+
+        <EditText
+            android:gravity="top"
+            android:inputType="text"
+            android:id="@+id/hadias"
+            style="@style/EditText.Data"
+            android:layout_width="match_parent"
+            android:layout_height="238dp"
+            android:hint="Utarakan dengan singkat dan jelas." />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/next_button"
+                style="@style/Button.Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELANJUTNYA" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
