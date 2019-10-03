@@ -67,7 +67,7 @@
             android:layout_marginTop="128dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login With Google"
+            android:text="Login Dengan Google"
             style="@style/Button.Login" />
     </LinearLayout>
 

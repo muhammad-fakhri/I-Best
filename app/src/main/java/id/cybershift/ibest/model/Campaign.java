@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Campaign implements Parcelable {
+    String posterPath;
     String userUID;
     String key;
     String judul;
@@ -16,6 +17,7 @@ public class Campaign implements Parcelable {
     String informasi_tambahan;
 
     protected Campaign(Parcel in) {
+        posterPath = in.readString();
         userUID = in.readString();
         key = in.readString();
         judul = in.readString();
@@ -138,6 +140,7 @@ public class Campaign implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(posterPath);
         parcel.writeString(userUID);
         parcel.writeString(key);
         parcel.writeString(judul);

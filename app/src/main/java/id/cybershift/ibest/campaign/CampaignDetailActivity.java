@@ -29,6 +29,8 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
     public void onClick(View view) {
         if (view.getId() == R.id.btn_join) {
             startActivity(new Intent(view.getContext(), JoinCampaignThankYouActivity.class));
+        } else if (view.getId() == R.id.back_button) {
+            finish();
         }
     }
 }

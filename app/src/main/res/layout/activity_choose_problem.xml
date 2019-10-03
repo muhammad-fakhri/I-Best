@@ -96,6 +96,7 @@
                     android:rowCount="5">
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/campaign1"
                         style="@style/GridTopic.Left"
                         android:layout_width="0dp"
                         android:layout_height="156dp"

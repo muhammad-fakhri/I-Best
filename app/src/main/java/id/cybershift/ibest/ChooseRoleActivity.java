@@ -23,14 +23,12 @@ public class ChooseRoleActivity extends AppCompatActivity implements View.OnClic
 
         //Set Toolbar as ActionBar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        ImageView backArrow = findViewById(R.id.back_button);
 
         //Casting all view
         CardView btnRoleVolunteer = findViewById(R.id.btn_role_volunteer);
         CardView btnRoleOrganization = findViewById(R.id.btn_role_organization);
 
         //Set click listener
-        backArrow.setOnClickListener(this);
         btnRoleVolunteer.setOnClickListener(this);
         btnRoleOrganization.setOnClickListener(this);
     }

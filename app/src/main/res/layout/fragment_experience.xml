@@ -6,44 +6,44 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:columnCount="2"
 tools:context=".story.ExperienceFragment">
-
 <android.support.v7.widget.CardView
-    style="@style/GridTopic.LeftStory"
-    android:layout_width="0dp"
-    android:layout_height="156dp"
-    android:layout_columnWeight="1"
-    app:cardBackgroundColor="@color/transparent"
-    app:cardCornerRadius="8dp">
+        android:id="@+id/problem_3"
+        style="@style/GridTopic.LeftStory"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_columnWeight="1"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="8dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imageView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/temp_pic_1" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:fontFamily="@font/roboto_black"
-            android:paddingLeft="@dimen/activity_horizontal_margin_half"
-            android:paddingRight="@dimen/activity_horizontal_margin_half"
-            android:paddingBottom="@dimen/activity_vertical_margin_half"
-            android:text="AKU KAYA ! WAHAHAHAHAHAHAH"
-            android:textAlignment="textStart"
-            android:textColor="#EFF3F5"
-            android:textSize="10sp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fisher" />
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:paddingLeft="@dimen/activity_horizontal_margin_half"
+                android:paddingRight="@dimen/activity_horizontal_margin_half"
+                android:paddingBottom="@dimen/activity_vertical_margin_half"
+                android:text="Surga Ikan Segar tapi Kasus Stunting Tinggi, Kenapa Ya?"
+                android:textAlignment="textStart"
+                android:textColor="#EFF3F5"
+                android:textSize="10sp" />
 
-</android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 <android.support.v7.widget.CardView
+    android:id="@+id/problem_2"
     style="@style/GridTopic.RightStory"
     android:layout_width="0dp"
     android:layout_height="156dp"
@@ -60,7 +60,7 @@ tools:context=".story.ExperienceFragment">
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/temp_pic_1" />
+            android:src="@drawable/mengemis" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +70,81 @@ tools:context=".story.ExperienceFragment">
             android:paddingLeft="@dimen/activity_horizontal_margin_half"
             android:paddingRight="@dimen/activity_horizontal_margin_half"
             android:paddingBottom="@dimen/activity_vertical_margin_half"
-            android:text="HALO GUYS, KEMBALI LAGI BERSAMA GW "
+            android:text="Terpaksa Mengemis, Penderita Stunting Rawat Ayah Menderita Stroke"
+            android:textAlignment="textStart"
+            android:textColor="#EFF3F5"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+        android:id="@+id/problem_1"
+        style="@style/GridTopic.LeftStory"
+        android:layout_width="0dp"
+        android:layout_height="156dp"
+        android:layout_columnWeight="1"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stunting_masih_ada" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:paddingLeft="@dimen/activity_horizontal_margin_half"
+                android:paddingRight="@dimen/activity_horizontal_margin_half"
+                android:paddingBottom="@dimen/activity_vertical_margin_half"
+                android:text="Stunting Masih Ada di Zaman Telepon Pintar, Bagaimana Penanganannya?"
+                android:textAlignment="textStart"
+                android:textColor="#EFF3F5"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+    android:id="@+id/problem_4"
+    style="@style/GridTopic.RightStory"
+    android:layout_width="0dp"
+    android:layout_height="156dp"
+    android:layout_columnWeight="1"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stunting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/roboto_black"
+            android:paddingLeft="@dimen/activity_horizontal_margin_half"
+            android:paddingRight="@dimen/activity_horizontal_margin_half"
+            android:paddingBottom="@dimen/activity_vertical_margin_half"
+            android:text="Lahir dari ibu penderita anemia, Arya dan kedua adiknya alami stunting"
             android:textAlignment="textStart"
             android:textColor="#EFF3F5"
             android:textSize="10sp" />

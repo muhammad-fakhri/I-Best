@@ -58,7 +58,7 @@ tools:context=".problem.MakeProblemDetailActivity">
                 android:background="@drawable/edittext_data_rounded_corners"></View>
 
             <ImageView
-                android:id="@+id/problem_image"
+                android:id="@+id/received_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"

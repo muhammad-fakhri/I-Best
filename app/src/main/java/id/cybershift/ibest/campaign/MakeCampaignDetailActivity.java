@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,10 +16,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -37,7 +44,9 @@ public class MakeCampaignDetailActivity extends AppCompatActivity implements Vie
     int bitmap_size = 60; // range 1 - 100
     Campaign campaign;
     FirebaseDatabase database;
+    FirebaseStorage storage;
     DatabaseReference campaignRef;
+    StorageReference storageRef, campaignPicRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +71,8 @@ public class MakeCampaignDetailActivity extends AppCompatActivity implements Vie
 
         database = FirebaseDatabase.getInstance();
         campaignRef = database.getReference("campaign");
+        storage = FirebaseStorage.getInstance();
+        storageRef = storage.getReference();
 
 //        Intent intent = getIntent();
 //        Campaign campaign = new Campaign(
@@ -82,18 +93,7 @@ public class MakeCampaignDetailActivity extends AppCompatActivity implements Vie
         } else if (view.getId() == R.id.back_button) {
             finish();
         } else if (view.getId() == R.id.next_button) {
-
-            campaign.setTugas_relawan(volunteerJob.getText().toString());
-            campaign.setBarang(logistic.getText().toString());
-            campaign.setBriefing(briefing.getText().toString());
-            campaign.setInformasi_tambahan(information.getText().toString());
-            campaignRef.push()
-                    .setValue(campaign)
-                    .addOnSuccessListener(this, new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                        }
-                    });
+            doTheRightThing();
             startNewMainActivity(MakeCampaignDetailActivity.this, MakeCampaignDoneActivity.class);
         }
     }
@@ -156,5 +156,42 @@ public class MakeCampaignDetailActivity extends AppCompatActivity implements Vie
             width = (int) (height * bitmapRatio);
         }
         return Bitmap.createScaledBitmap(image, width, height, true);
+    }
+
+    void doTheRightThing(){
+        //Store data to database
+        campaign.setTugas_relawan(volunteerJob.getText().toString());
+        campaign.setBarang(logistic.getText().toString());
+        campaign.setBriefing(briefing.getText().toString());
+        campaign.setInformasi_tambahan(information.getText().toString());
+        campaignRef.push()
+                .setValue(campaign)
+                .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                    }
+                });
+
+        //Upload picture to firebase storage
+//        campaignPicRef = storageRef.child("campaign/image");
+//        // Get the data from an ImageView as bytes
+//        receivedImage.setDrawingCacheEnabled(true);
+//        receivedImage.buildDrawingCache();
+//        Bitmap bitmap = ((BitmapDrawable) receivedImage.getDrawable()).getBitmap();
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//        byte[] data = baos.toByteArray();
+//        UploadTask uploadTask = campaignPicRef.putBytes(data);
+//        uploadTask.addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Toast.makeText(MakeCampaignDetailActivity.this, "GAGAL UPLOAD GAMBAR", Toast.LENGTH_SHORT).show();
+//            }
+//        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//            @Override
+//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                Toast.makeText(MakeCampaignDetailActivity.this, "BERHASIL UPLOAD GAMBAR", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }

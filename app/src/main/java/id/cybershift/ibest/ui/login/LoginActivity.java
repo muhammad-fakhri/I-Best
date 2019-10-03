@@ -107,8 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("FAKHRI", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
                             Toast.makeText(LoginActivity.this, "Halo " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
-//                            startNewMainActivity(activity, MainActivity.class);
-                            startActivity(new Intent(activity, ChooseRoleActivity.class));
+                            startNewMainActivity(activity, ChooseRoleActivity.class);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("FAKHRI", "signInWithCredential:failure", task.getException());

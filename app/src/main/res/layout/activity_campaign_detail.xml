@@ -39,6 +39,7 @@ tools:context=".campaign.CampaignDetailActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/main_banner"
+            android:layout_marginTop="-1dp"
             android:orientation="vertical"
             android:padding="@dimen/general_margin">
 
@@ -54,8 +55,7 @@ tools:context=".campaign.CampaignDetailActivity">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/general_margin"
-                android:layout_marginBottom="@dimen/general_margin">
+                android:layout_marginTop="@dimen/general_margin">
 
                 <TextView
                     android:id="@+id/problem_thread_maker_name"
@@ -90,24 +90,137 @@ tools:context=".campaign.CampaignDetailActivity">
                     app:civ_border_width="2dp" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/PurpleOlder"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
             <TextView
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Detail Aktivitas"
-                android:textSize="12sp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_half"
                 android:fontFamily="@font/roboto_bold"
-                android:textColor="#574F7D"/>
+                android:text="Waktu dan Lokasi Aktivitas"
+                android:textColor="#574F7D"
+                android:textSize="12sp" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_half"
+                    android:src="@drawable/ic_time" />
+
+                <ImageView
+                    android:id="@+id/ic_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_time"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_half"
+                    android:src="@drawable/ic_date" />
+
+                <ImageView
+                    android:id="@+id/ic_hand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_date"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_half"
+                    android:src="@drawable/ic_holding_hand" />
+
+                <ImageView
+                    android:id="@+id/ic_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_hand"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_half"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ic_time"
+                    android:fontFamily="@font/roboto"
+                    android:text="30 September 2019"
+                    android:textColor="#4D4D4D"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_time"
+                    android:layout_toRightOf="@id/ic_date"
+                    android:fontFamily="@font/roboto"
+                    android:text="11 Oktober 2019 ー 18 Oktober 2019"
+                    android:textColor="#4D4D4D"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_date"
+                    android:layout_toRightOf="@id/ic_hand"
+                    android:fontFamily="@font/roboto"
+                    android:text="Offline ataupun Online"
+                    android:textColor="#4D4D4D"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ic_hand"
+                    android:layout_toRightOf="@id/ic_location"
+                    android:fontFamily="@font/roboto"
+                    android:text="Desa Cijantur, Bogor, Jawa Barat"
+                    android:textColor="#4D4D4D"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@color/PurpleOlder"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
 
             <TextView
-                android:layout_marginBottom="@dimen/general_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Detail Aktivitas"
+                android:textColor="#574F7D"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Tugas Relawan"
+                android:textColor="#574F7D"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/general_margin"
                 android:fontFamily="@font/roboto"
                 android:lineSpacingExtra="8dp"
                 android:text="@string/dummy_content_campaign"
                 android:textSize="12sp" />
+
+
 
         </LinearLayout>
     </RelativeLayout>

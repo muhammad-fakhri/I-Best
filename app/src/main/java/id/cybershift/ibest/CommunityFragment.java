@@ -2,6 +2,8 @@ package id.cybershift.ibest;
 
 
 import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,7 +14,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 import id.cybershift.ibest.report.Report1Activity;
 import id.cybershift.ibest.ui.login.LoginActivity;
@@ -23,6 +34,10 @@ import id.cybershift.ibest.ui.login.LoginActivity;
  */
 public class CommunityFragment extends Fragment implements View.OnClickListener {
     FirebaseAuth auth;
+    FirebaseUser user;
+    ImageView profilePic;
+    GoogleSignInOptions gso;
+    GoogleSignInClient googleSignInClient;
 
     public CommunityFragment() {
         // Required empty public constructor
@@ -33,6 +48,14 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        googleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_community, container, false);
     }
@@ -40,6 +63,16 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        profilePic = view.findViewById(R.id.profile_image);
+        Uri profilePicURL = user.getPhotoUrl();
+
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.mipmap.ic_launcher_round);
+
+        Glide.with(this).load(profilePicURL).apply(options).into(profilePic);
 
         ImageView peopleIcon = view.findViewById(R.id.people_menu);
         CardView reportNotif = view.findViewById(R.id.report_notif);
@@ -58,7 +91,7 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
                 startActivity(new Intent(view.getContext(), Report1Activity.class));
                 break;
             case R.id.people_menu:
-                auth.signOut();
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
