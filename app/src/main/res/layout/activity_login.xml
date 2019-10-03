@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/onboarding4"
-    android:padding="28dp"
     tools:context=".ui.login.LoginActivity">
 
     <android.support.v4.view.ViewPager
@@ -14,13 +12,66 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
+        android:id="@+id/tagline_wrapper"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tagline_maintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp"
+            tools:fontFamily="@font/roboto_bold" />
+
+        <TextView
+            android:id="@+id/tagline_subtext"
+            android:layout_width="242dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="@dimen/general_margin"
+        android:paddingLeft="@dimen/general_margin"
+        android:id="@+id/login_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagline_wrapper"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginTop="128dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login Dengan Google"
+            style="@style/Button.Login" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dots_height"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/dots_margin_bottom"
         android:gravity="center"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"

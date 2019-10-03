@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
-    private Button btnSkip, btnNext;
+    private Button btnSkip, btnNext, loginButton;
     private PrefManager prefManager;
 
     int RC_SIGN_IN = 1;
@@ -70,13 +70,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
 
         // mengecek lauch activity - sebelum memanggil setContentView()
         prefManager = new PrefManager(this);
-        if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
-            finish();
-        }
+//        if (!prefManager.isFirstTimeLaunch()) {
+//            launchHomeScreen();
+//            finish();
+//        }
 
         // membuat transparan notifikasi
         if (Build.VERSION.SDK_INT >= 21) {
@@ -100,8 +101,6 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        setContentView(R.layout.activity_login);
-
         // layout xml slide 1 sampai 4
         // add few more layouts if you want
         layouts = new int[]{
@@ -123,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchHomeScreen();
+//                launchHomeScreen();
             }
         });
 
@@ -137,15 +136,17 @@ public class LoginActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+//                    launchHomeScreen();
                 }
             }
         });
 
-        final Button loginButton = findViewById(R.id.btn_login);
+        loginButton = findViewById(R.id.btn_login);
+        loginButton.setVisibility(View.INVISIBLE);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                prefManager.setFirstTimeLaunch(false);
                 signIn();
             }
         });
@@ -252,6 +253,7 @@ public class LoginActivity extends AppCompatActivity {
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
                 btnNext.setText("");
+                loginButton.setVisibility(View.VISIBLE);
                 btnSkip.setVisibility(View.GONE);
             } else {
                 // still pages are left
