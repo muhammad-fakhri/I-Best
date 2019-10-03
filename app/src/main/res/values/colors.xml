@@ -11,4 +11,5 @@
     <color name="BlackTransparent">#FF4D4D4D</color>
     <color name="PurpleYounger">#4F3A65</color>
     <color name="PurpleOlder">#36214D</color>
+    <color name="basicCardView">#DFF0EA</color>
 </resources>

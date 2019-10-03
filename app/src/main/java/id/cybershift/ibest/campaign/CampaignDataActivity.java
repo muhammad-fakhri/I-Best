@@ -8,17 +8,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import id.cybershift.ibest.R;
 import id.cybershift.ibest.model.Campaign;
 
 public class CampaignDataActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText title, time, deadline, location;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campaign_data);
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
 
         title = findViewById(R.id.campaign_title);
         time = findViewById(R.id.campaign_time);
@@ -35,6 +43,7 @@ public class CampaignDataActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View view) {
         if (view.getId() == R.id.next_button) {
             Campaign campaign = new Campaign(
+                    user.getUid(),
                     title.getText().toString(),
                     time.getText().toString(),
                     deadline.getText().toString(),

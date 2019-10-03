@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".campaign.CampaignDetailActivity">
+tools:context=".problem.ProblemDetailActivity">
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -58,7 +58,7 @@ tools:context=".campaign.CampaignDetailActivity">
                 android:background="@drawable/edittext_data_rounded_corners"></View>
 
             <ImageView
-                android:id="@+id/received_image"
+                android:id="@+id/problem_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -70,47 +70,26 @@ tools:context=".campaign.CampaignDetailActivity">
                 android:layout_height="30dp"
                 android:src="@drawable/ic_add"
                 android:layout_centerInParent="true"/>
-
         </RelativeLayout>
 
         <TextView
+            android:lineSpacingExtra="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tambah Informasi"
+            android:text="Ceritakan detail kisah, alasan berbagi kisah, dan rencana kedepannya"
             android:textSize="14sp"
             android:textColor="#4F3A65"
             android:fontFamily="@font/roboto_bold"
             android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
         <EditText
-            android:id="@+id/campaign_volunteer_job"
+            android:id="@+id/problem_detail"
             style="@style/EditText.Data"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tugas Relawan"
+            android:layout_height="364dp"
+            android:gravity="left"
+            android:hint="Mulai menulis dan ungkapkan keresahan kalian"
             android:inputType="text" />
-
-        <EditText
-            android:id="@+id/campaign_logistic"
-            style="@style/EditText.Data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Barang Perlu Disiapkan" />
-
-        <EditText
-            android:id="@+id/campaign_briefing"
-            style="@style/EditText.Data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Briefing" />
-
-        <EditText
-            android:id="@+id/campaign_more_information"
-            style="@style/EditText.Data"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:gravity="top"
-            android:hint="Informasi Tambahan" />
 
         <LinearLayout
             android:layout_width="fill_parent"

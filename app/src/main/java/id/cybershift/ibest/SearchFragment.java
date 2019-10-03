@@ -21,7 +21,6 @@ public class SearchFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,9 +36,9 @@ public class SearchFragment extends Fragment {
         underlineOrganization.setVisibility(View.INVISIBLE);
         View underlineVolunteer = view.findViewById(R.id.underline_volunteer_part);
         underlineVolunteer.setVisibility(View.INVISIBLE);
-        TextView organizationSearch = view.findViewById(R.id.search_organization_part);
-        organizationSearch.setVisibility(View.INVISIBLE);
-        TextView volunteerSearch = view.findViewById(R.id.search_volunteer_part);
-        volunteerSearch.setVisibility(View.INVISIBLE);
+//        TextView organizationSearch = view.findViewById(R.id.search_organization_part);
+//        organizationSearch.setVisibility(View.INVISIBLE);
+//        TextView volunteerSearch = view.findViewById(R.id.search_volunteer_part);
+//        volunteerSearch.setVisibility(View.INVISIBLE);
     }
 }

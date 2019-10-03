@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Campaign implements Parcelable {
+    String userUID;
     String key;
     String judul;
     String periode_waktu;
@@ -14,17 +15,8 @@ public class Campaign implements Parcelable {
     String briefing;
     String informasi_tambahan;
 
-    public Campaign() {
-    }
-
-    public Campaign(String judul, String periode_waktu, String batas_registrasi, String lokasi) {
-        this.judul = judul;
-        this.periode_waktu = periode_waktu;
-        this.batas_registrasi = batas_registrasi;
-        this.lokasi = lokasi;
-    }
-
     protected Campaign(Parcel in) {
+        userUID = in.readString();
         key = in.readString();
         judul = in.readString();
         periode_waktu = in.readString();
@@ -47,6 +39,25 @@ public class Campaign implements Parcelable {
             return new Campaign[size];
         }
     };
+
+    public String getUserUID() {
+        return userUID;
+    }
+
+    public void setUserUID(String userUID) {
+        this.userUID = userUID;
+    }
+
+    public Campaign() {
+    }
+
+    public Campaign(String userID, String judul, String periode_waktu, String batas_registrasi, String lokasi) {
+        this.userUID = userID;
+        this.judul = judul;
+        this.periode_waktu = periode_waktu;
+        this.batas_registrasi = batas_registrasi;
+        this.lokasi = lokasi;
+    }
 
     public String getKey() {
         return key;
@@ -127,6 +138,7 @@ public class Campaign implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(userUID);
         parcel.writeString(key);
         parcel.writeString(judul);
         parcel.writeString(periode_waktu);

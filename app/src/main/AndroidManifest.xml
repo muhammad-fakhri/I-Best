@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".experience.ExperienceDataActivity"></activity>
+        <activity android:name=".problem.ProblemThankYouActivity" />
+        <activity android:name=".problem.ProblemDetailActivity" />
+        <activity android:name=".problem.ProblemDataActivity" />
         <activity android:name=".organizationData.OrganizationData4Activity" />
         <activity android:name=".organizationData.OrganizationData3Activity" />
         <activity android:name=".organizationData.OrganizationData2Activity" />

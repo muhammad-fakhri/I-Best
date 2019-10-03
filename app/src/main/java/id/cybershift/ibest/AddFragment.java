@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import id.cybershift.ibest.campaign.ChooseProblemActivity;
+import id.cybershift.ibest.experience.ExperienceDataActivity;
+import id.cybershift.ibest.problem.ProblemDataActivity;
 
 
 /**
@@ -49,14 +51,13 @@ public class AddFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_make_campaign:
-                Intent intent = new Intent(this.getActivity(), ChooseProblemActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(this.getActivity(), ChooseProblemActivity.class));
                 break;
             case R.id.btn_report_problem:
-                Toast.makeText(view.getContext(), "COMING SOON", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this.getActivity(), ProblemDataActivity.class));
                 break;
             case R.id.btn_share_story:
-                Toast.makeText(view.getContext(), "COMING SOON", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this.getActivity(), ExperienceDataActivity.class));
                 break;
             default:
                 break;

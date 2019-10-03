@@ -14,6 +14,7 @@ import id.cybershift.ibest.R;
 public class VolunteerData3Activity extends AppCompatActivity implements View.OnClickListener {
 
     CardView difabel, humanRight, healt, disaster, edu, youth, agri, science, worker, environment;
+    boolean a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, i = false, j = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,46 +53,104 @@ public class VolunteerData3Activity extends AppCompatActivity implements View.On
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.difabel:
-                difabel.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (a) {
+                    difabel.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    a = false;
+                } else {
+                    difabel.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                    a = true;
+                }
                 break;
             case R.id.human_right:
-                humanRight.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (b) {
+                    humanRight.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    b = false;
+                } else {
+                    b = true;
+                    humanRight.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.health:
-                healt.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (c) {
+                    healt.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    c = false;
+                } else {
+                    healt.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                    c = true;
+                }
                 break;
             case R.id.disaster:
-                disaster.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (d) {
+                    disaster.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    d = false;
+                } else {
+                    d = true;
+                    disaster.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.education:
-                edu.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (e) {
+                    edu.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    e = false;
+                } else {
+                    edu.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                    e = true;
+                }
                 break;
             case R.id.youth_development:
-                youth.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (f) {
+                    youth.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    f = false;
+                } else {
+                    f = true;
+                    youth.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.agricultural:
-                agri.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (g) {
+                    agri.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    g = false;
+                } else {
+                    g = true;
+                    agri.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.science:
-                science.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (h) {
+                    science.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    h = false;
+                } else {
+                    h = true;
+                    science.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.worker:
-                worker.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (i) {
+                    worker.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    i = false;
+                } else {
+                    i = true;
+                    worker.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
                 break;
             case R.id.environment:
-                environment.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                if (j) {
+                    environment.setCardBackgroundColor(getResources().getColor(R.color.basicCardView));
+                    j = false;
+                } else {
+                    j = true;
+                    environment.setCardBackgroundColor(getResources().getColor(R.color.darkNice));
+                }
+                break;
+            case R.id.back_button:
+                finish();
+                break;
+            case R.id.next_button:
+                startActivity(new Intent(this, ThankYouActivity.class));
                 break;
             default:
                 Log.d("FAKHRI", "ADA YANG ANEH SAMA CARDVIEWNYA");
                 break;
-        }
-        if (view.getId() == R.id.back_button) {
-            finish();
-        } else if (view.getId() == R.id.next_button) {
-            Intent intent = new Intent(this, ThankYouActivity.class);
-            startActivity(intent);
-        } else if (view.getId() == R.id.imageView) {
-
         }
     }
 }

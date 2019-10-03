@@ -1,5 +1,7 @@
 package id.cybershift.ibest.campaign;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,7 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,27 +32,38 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
 
     public static final String EXTRA_CAMPAIGN_DATA = "extra_campaign_data";
     int PICK_IMAGE_REQUEST = 1;
+    Button btnNext;
     Bitmap bitmap, decoded;
-    ImageView receivedImage, btnAddImage;
+    ImageView receivedImage, btnAddImage, backButton;
+    EditText volunteerJob, logistic, briefing, information;
     int bitmap_size = 60; // range 1 - 100
+    Campaign campaign;
+    FirebaseDatabase database;
+    DatabaseReference campaignRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campaign_detail);
 
-        Campaign campaign= getIntent().getParcelableExtra(EXTRA_CAMPAIGN_DATA);
+        campaign = getIntent().getParcelableExtra(EXTRA_CAMPAIGN_DATA);
 
-        Button btnNext = findViewById(R.id.next_button);
-        ImageView backButton = findViewById(R.id.back_button);
+        btnNext = findViewById(R.id.next_button);
+        backButton = findViewById(R.id.back_button);
         btnAddImage = findViewById(R.id.add_image_btn);
         receivedImage = findViewById(R.id.received_image);
+
+        volunteerJob = findViewById(R.id.campaign_volunteer_job);
+        logistic = findViewById(R.id.campaign_logistic);
+        briefing = findViewById(R.id.campaign_briefing);
+        information = findViewById(R.id.campaign_more_information);
+
         btnNext.setOnClickListener(this);
         backButton.setOnClickListener(this);
         btnAddImage.setOnClickListener(this);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("campaign");
+        database = FirebaseDatabase.getInstance();
+        campaignRef = database.getReference("campaign");
 
 //        Intent intent = getIntent();
 //        Campaign campaign = new Campaign(
@@ -57,15 +72,6 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
 //                intent.getStringExtra("EXTRA_DEADLINE"),
 //                intent.getStringExtra("EXTRA_LOCATION")
 //        );
-
-        reference.child("campaign").push()
-                .setValue(campaign)
-                .addOnSuccessListener(this, new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(CampaignDetailActivity.this, "BERHASIL MENYIMPAN DATA KE DATABASE", Toast.LENGTH_SHORT).show();
-                    }
-                });
     }
 
     @Override
@@ -78,8 +84,29 @@ public class CampaignDetailActivity extends AppCompatActivity implements View.On
         } else if (view.getId() == R.id.back_button) {
             finish();
         } else if (view.getId() == R.id.next_button) {
-            startActivity(new Intent(this, MakeCampaignDoneActivity.class));
+
+            campaign.setTugas_relawan(volunteerJob.getText().toString());
+            campaign.setBarang(logistic.getText().toString());
+            campaign.setBriefing(briefing.getText().toString());
+            campaign.setInformasi_tambahan(information.getText().toString());
+            campaignRef.push()
+                    .setValue(campaign)
+                    .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(CampaignDetailActivity.this, "BERHASIL MENYIMPAN DATA KE DATABASE", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+            startNewMainActivity(CampaignDetailActivity.this, MakeCampaignDoneActivity.class);
         }
+    }
+
+    static void startNewMainActivity(Context currentActivity, Class<? extends Activity> newTopActivityClass) {
+        Intent intent = new Intent(currentActivity, newTopActivityClass);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        currentActivity.startActivity(intent);
     }
 
     @Override
