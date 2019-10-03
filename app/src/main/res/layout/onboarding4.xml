@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding4"
+    android:padding="28dp">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/tagline_wrapper"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tagline_maintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Mari Berkontribusi"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp"
+            tools:fontFamily="@font/roboto_bold" />
+
+        <TextView
+            android:id="@+id/tagline_subtext"
+            android:layout_width="242dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="Cegah stunting sejak dini demi Indonesia yang siap bersaing"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagline_wrapper"
+        android:orientation="vertical">
+
+        <!--&lt;!&ndash;        <EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:id="@+id/login_email"&ndash;&gt;-->
+        <!--&lt;!&ndash;            style="@style/EditText.Login"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:hint="Alamat E-mail"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:inputType="textEmailAddress" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        <EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:id="@+id/login_password"&ndash;&gt;-->
+        <!--&lt;!&ndash;            style="@style/EditText.Login"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:hint="Password"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:inputType="text" />&ndash;&gt;-->
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginTop="128dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login Dengan Google"
+            style="@style/Button.Login" />
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_marginTop="@dimen/general_margin"-->
+    <!--        android:layout_below="@id/login_wrapper"-->
+    <!--        android:id="@+id/register_hint_wrapper"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/register_hint"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/roboto"-->
+    <!--            android:text="Belum memiliki akun?"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColor="#FFFFFFFF"-->
+    <!--            android:textSize="14dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/register_link"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/roboto_bold"-->
+    <!--            android:text="Ayo bergabung bersama kami."-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColor="#FFFFFFFF"-->
+    <!--            android:textSize="14dp" />-->
+    <!--    </LinearLayout>-->
+</RelativeLayout>

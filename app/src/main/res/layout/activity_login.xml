@@ -4,99 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_1"
+    android:background="@drawable/onboarding4"
     android:padding="28dp"
     tools:context=".ui.login.LoginActivity">
 
-    <LinearLayout
-        android:id="@+id/tagline_wrapper"
-        android:layout_centerVertical="true"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tagline_maintext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Mari Berkontribusi"
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFFFF"
-            android:textSize="20dp"
-            tools:fontFamily="@font/roboto_bold" />
-
-        <TextView
-            android:id="@+id/tagline_subtext"
-            android:layout_width="242dp"
-            android:layout_height="36dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/roboto"
-            android:text="Cegah stunting sejak dini demi Indonesia yang siap bersaing"
-            android:textAlignment="textStart"
-            android:textColor="#FFFFFFFF"
-            android:textSize="14dp" />
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
     <LinearLayout
-        android:id="@+id/login_wrapper"
+        android:id="@+id/layoutDots"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dots_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dots_margin_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".5"
+        android:layout_above="@id/layoutDots"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tagline_wrapper"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="Next"
+        android:textColor="@android:color/white" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/login_email"-->
-<!--            style="@style/EditText.Login"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="Alamat E-mail"-->
-<!--            android:inputType="textEmailAddress" />-->
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:text="Skip"
+        android:textColor="@android:color/white" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/login_password"-->
-<!--            style="@style/EditText.Login"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="Password"-->
-<!--            android:inputType="text" />-->
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_marginTop="128dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login Dengan Google"
-            style="@style/Button.Login" />
-    </LinearLayout>
-
-<!--    <LinearLayout-->
-<!--        android:layout_marginTop="@dimen/general_margin"-->
-<!--        android:layout_below="@id/login_wrapper"-->
-<!--        android:id="@+id/register_hint_wrapper"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/register_hint"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/roboto"-->
-<!--            android:text="Belum memiliki akun?"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#FFFFFFFF"-->
-<!--            android:textSize="14dp" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/register_link"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/roboto_bold"-->
-<!--            android:text="Ayo bergabung bersama kami."-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#FFFFFFFF"-->
-<!--            android:textSize="14dp" />-->
-<!--    </LinearLayout>-->
 </RelativeLayout>

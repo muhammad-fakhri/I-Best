@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboard2"
+    android:padding="28dp">
+
+    <LinearLayout
+        android:id="@+id/tagline_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tagline_maintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Jalin hubungan dengan komunitas relawan"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp"
+            tools:fontFamily="@font/roboto_bold" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tagline_subtext"-->
+<!--            android:layout_width="242dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:text="Cegah stunting sejak dini demi Indonesia yang siap bersaing"-->
+<!--            android:textAlignment="textStart"-->
+<!--            android:textColor="#FFFFFFFF"-->
+<!--            android:textSize="14dp" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagline_wrapper"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>
