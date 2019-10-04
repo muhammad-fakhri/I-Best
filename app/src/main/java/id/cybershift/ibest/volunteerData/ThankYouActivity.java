@@ -2,15 +2,15 @@ package id.cybershift.ibest.volunteerData;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import id.cybershift.ibest.MainActivity;
 import id.cybershift.ibest.R;
 
-public class    ThankYouActivity extends AppCompatActivity implements View.OnClickListener {
+public class ThankYouActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

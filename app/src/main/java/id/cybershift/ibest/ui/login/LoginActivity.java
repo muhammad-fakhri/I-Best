@@ -1,8 +1,6 @@
 package id.cybershift.ibest.ui.login;
 
 import android.app.Activity;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,23 +8,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.Html;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,8 +40,6 @@ import id.cybershift.ibest.ChooseRoleActivity;
 import id.cybershift.ibest.MainActivity;
 import id.cybershift.ibest.PrefManager;
 import id.cybershift.ibest.R;
-import id.cybershift.ibest.volunteerData.VolunteerData1Activity;
-import id.cybershift.ibest.volunteerData.VolunteerData2Activity;
 
 public class LoginActivity extends AppCompatActivity {
 
