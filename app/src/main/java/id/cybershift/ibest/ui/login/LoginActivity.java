@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
         // layout xml slide 1 sampai 4
         // add few more layouts if you want
         layouts = new int[]{
+                R.layout.splash_screen,
                 R.layout.onboarding1,
                 R.layout.onboarding2,
                 R.layout.onboarding3,
