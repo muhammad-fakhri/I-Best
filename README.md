@@ -1,7 +1,7 @@
 # I-Best
 
 ## Description
-I-Best is an app that connects volunteers with those who need help from volunteers. This project was created for participation in GEMASTIK 2019.
+I-Best is a mobile app that connects volunteers with those who need help from volunteers. This project was created for participation in GEMASTIK 2019.
 
 ## Developer Team
 1. Muhammad Fakhri ([@muhammad-fakhri](https://github.com/muhammad-fakhri))
